@@ -1,0 +1,32 @@
+note over browser:
+form.onsubmit is called
+end note
+
+note over browser:
+event handler immediately calls the method e.preventDefault()
+end note
+
+note over browser:
+create JSON-data containing both the 
+content of the note (content) 
+and the timestamp (date):
+end note
+
+note over browser:
+adds note to the notes list 
+with the command notes.push(note)
+end note
+
+note over browser:
+rerenders the note list on the page
+end note
+
+note over browser:
+sends new note to server by following POST request
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over server:
+server creates a new note object, and adds it to an array called
+end note
+server-->browser: status code 201 (created)
